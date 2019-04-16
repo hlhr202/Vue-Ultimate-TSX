@@ -1,4 +1,9 @@
-# test-vue
+# Vue Ultimate TSX
+This project is showing how pure tsx works in vue eco-system, it just copy the developing pattern from react tsx
+
+d.ts for styled-components-vue is under development
+
+------
 
 ## Project setup
 ```
