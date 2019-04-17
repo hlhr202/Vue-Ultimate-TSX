@@ -4,6 +4,8 @@ This project is showing how pure tsx works in vue eco-system, it just copy the d
 
 The tsx demo including mobx store/viewmodel, styled-components and unit-test
 
+Note that there would not be any vue SFC in the workspace. But all the vue functionality goes well, or even better
+
 d.ts for styled-components-vue is under development
 
 ------
