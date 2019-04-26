@@ -24,7 +24,8 @@ type IExtensibleStyledComponent<
 > & {
     extend: <P = Prop>(
         css: TemplateStringsArray,
-        propFunction?: (prop: P) => string
+        propFunction?: (prop: P) => string,
+        selector?: TsxComponent<Vue>
     ) => IExtensibleStyledComponent<
         P,
         EventsWithOn,
@@ -41,7 +42,8 @@ type IStyledWrapper<
 > = {
     [TAG in HTMLTags]: <P = Prop>(
         css: TemplateStringsArray,
-        propFunction?: (prop: P) => string
+        propFunction?: (prop: P) => string,
+        selector?: TsxComponent<Vue>
     ) => IExtensibleStyledComponent<
         P & IntrinsicElementAttributes[TAG],
         EventsWithOn & EventsOn<IntrinsicElementAttributes[TAG]>,
@@ -51,7 +53,8 @@ type IStyledWrapper<
 } & {
     <W>(wrapped: W): <P = Prop>(
         css: TemplateStringsArray,
-        propFunction?: (prop: P) => string
+        propFunction?: (prop: P) => string,
+        selector?: TsxComponent<Vue>
     ) => IExtensibleStyledComponent<
         P,
         EventsWithOn,

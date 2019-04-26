@@ -4,7 +4,7 @@ import { inject, ViewModel } from "mmlpx";
 import { Component as VueComponent } from "vue-tsx-support";
 import { Component, Prop } from "vue-property-decorator";
 import { computed, observable, action } from "mobx";
-import { HomeWrapper } from "./styled";
+import { HomeWrapper, Button } from "./styled";
 
 @ViewModel
 class Model {
@@ -44,6 +44,7 @@ export default class Home extends VueComponent<{ me?: string }> {
     render() {
         return (
             <HomeWrapper color={this.model.color}>
+                <Button>What the frek</Button>
                 <div class="me">{this.me}</div>
                 <div>Your input is: {this.model.text}</div>
                 <input v-model={this.model.text} />
