@@ -1,7 +1,7 @@
-import styleWithProps from "@/lib/styled-components";
+import styleWithProps from '@/lib/styled-components';
 
 const styled = styleWithProps({
-    color: { type: String, required: false, default: "black" }
+    color: { type: String, required: false, default: 'black' },
 });
 
 export const Button = styled.span<{}>`
@@ -15,6 +15,7 @@ export const HomeWrapper = styled.p`
         color: ${props => props.color!};
     }
     ${Button} & {
+        // Currently Not supported in vue
         background: black;
         color: white;
     }
