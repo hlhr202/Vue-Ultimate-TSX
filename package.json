@@ -11,9 +11,6 @@
   },
   "dependencies": {
     "core-js": "^3.0.1",
-    "mmlpx": "^4.0.2",
-    "mobx": "^5.9.4",
-    "mobx-vue": "^2.0.8",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-animejs": "^2.1.1",

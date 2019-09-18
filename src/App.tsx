@@ -1,6 +1,6 @@
-import { Component as VueComponent } from "vue-tsx-support";
-import { Component } from "vue-property-decorator";
-const { injectGlobal } = require("vue-styled-components");
+import { Component as VueComponent } from 'vue-tsx-support';
+import { Component } from 'vue-property-decorator';
+const { injectGlobal } = require('vue-styled-components');
 
 const GlobalStyle = injectGlobal`
     #app {
@@ -25,9 +25,9 @@ const GlobalStyle = injectGlobal`
 
 @Component
 export default class App extends VueComponent<{}> {
-    render() {
+    public render() {
         return (
-            <div id="app">
+            <div id='app'>
                 <GlobalStyle />
                 <router-view />
             </div>

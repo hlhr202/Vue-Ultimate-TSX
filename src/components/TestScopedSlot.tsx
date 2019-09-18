@@ -1,5 +1,5 @@
-import { Component as VueComponent } from "vue-tsx-support";
-import { Component, Prop } from "vue-property-decorator";
+import { Component as VueComponent } from 'vue-tsx-support';
+import { Component, Prop } from 'vue-property-decorator';
 
 @Component
 export default class TestScopedSlot extends VueComponent<
@@ -8,16 +8,16 @@ export default class TestScopedSlot extends VueComponent<
     { dafuq?: { data: string }; dafuqfuq?: { data: string } }
 > {
     @Prop({ required: true, type: String })
-    what!: string;
+    public what!: string;
 
-    frek = "";
+    public frek = '';
 
-    visibilityChanged(isVisible: boolean, entry: any) {
+    public visibilityChanged(isVisible: boolean, entry: any) {
         console.log(isVisible);
         console.log(entry);
     }
 
-    render() {
+    public render() {
         return (
             <div>
                 <div v-observe-visibility={this.visibilityChanged}>
@@ -27,18 +27,18 @@ export default class TestScopedSlot extends VueComponent<
                 <div>{this.frek}</div>
                 <div
                     v-anime={{
-                        rotate: "1turn",
+                        rotate: '1turn',
                         duration: 2000,
-                        loop: false
+                        loop: false,
                     }}
                 >
                     123234
                 </div>
                 {!!this.$scopedSlots.dafuq && (
-                    <div>{this.$scopedSlots.dafuq({ data: "123" })}</div>
+                    <div>{this.$scopedSlots.dafuq({ data: '123' })}</div>
                 )}
                 {!!this.$scopedSlots.dafuqfuq && (
-                    <div>{this.$scopedSlots.dafuqfuq({ data: "234" })}</div>
+                    <div>{this.$scopedSlots.dafuqfuq({ data: '234' })}</div>
                 )}
             </div>
         );
